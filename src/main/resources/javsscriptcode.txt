@@ -1,0 +1,37 @@
+//Iphone 16 code
+const { chromium, devices } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const iPhone16Pro = devices['iPhone 13 Pro']; // Currently, iPhone 16 Pro is not available, so we use iPhone 13 Pro as a close approximation
+  const context = await browser.newContext({
+    ...iPhone16Pro,
+    userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'
+  });
+
+  const page = await context.newPage();
+  await page.goto('https://example.com');
+
+  console.log(await page.evaluate(() => navigator.userAgent));
+
+  await browser.close();
+})();
+
+//samsung  SM-S928B
+//Galaxy S24 Ultra (SM-S928B)
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Linux; Android 14; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.210 Mobile Safari/537.36'
+  });
+
+  const page = await context.newPage();
+  await page.goto('https://example.com');
+
+  console.log(await page.evaluate(() => navigator.userAgent));
+
+  await browser.close();
+})();
+
