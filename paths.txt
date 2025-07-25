@@ -1,0 +1,9 @@
+Paths :
+// await page.locator("//a[@data-link-text='Dental Benefits Advisor - Product Details']").click();
+    await page.locator("//a[@data-link-text='Professional Claims - Product Details']").click();
+    //a[@data-link-text='Dental Benefits Advisor - Product Details']
+//a[@data-link-text='Professional Claims - Product Details']
+    //a[@data-link-text='Claim Status - Product Details']
+    //a[@data-link-text='Assurance Reimbursement Management - Product Details']
+    //a[@data-link-text='Institutional Claims - Product Details']
+    //a[@data-link-text='Telehealth Medical Eligibility and Claims Management Bundle - Product Details']
